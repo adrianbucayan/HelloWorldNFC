@@ -60,17 +60,6 @@ public class MainActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-//        Intent intent = getIntent();
-//        if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(getIntent().getAction())) {
-//            Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-//            mTag = tag;
-//            Parcelable[] rawMsgs = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
-//            if (rawMsgs != null) {
-//                NdefRecord relayRecord = ((NdefMessage) rawMsgs[0]).getRecords()[0];
-//                String nfcData = new String(relayRecord.getPayload());
-//                Toast.makeText(this, "NFC Data : " + nfcData, Toast.LENGTH_SHORT).show();
-//            }
-//        }
         adapter.enableForegroundDispatch(this, pendingIntent, writeTagFilters, null);
     }
 
